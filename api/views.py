@@ -30,10 +30,6 @@ class ItemByCategoryView(generics.ListAPIView):
         if category_id:
             return Item.objects.filter(category__id=category_id)
         return Item.objects.all()
-    
-class DeleteItemView(generics.DestroyAPIView):
-    queryset = Item.objects.all()
-    serializer_class = ItemSerializer
 
 # Categories
 class CategoriesView(generics.ListAPIView):
