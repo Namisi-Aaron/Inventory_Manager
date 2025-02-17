@@ -10,11 +10,18 @@ This project uses Django Rest Framework to provide api endpoints for a simple in
 
 #### Get all items
 
-Endpoint for adding new item
+Endpoint for listing all items
 
 ```http
-  GET /items
+  GET 
 ```
+
+To filter items by category use:
+
+```http
+  GET ?category=<str:id>
+```
+where id is the id of the category you want to filter by.
 
 #### Get, update or delete item
 

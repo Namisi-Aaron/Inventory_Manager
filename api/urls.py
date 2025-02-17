@@ -4,7 +4,7 @@ from . import views
 
 urlpatterns = [
     path("item/<str:pk>/", views.ItemUpdateDeleteView.as_view()),
-    path("items/", views.ItemByCategoryView.as_view()),
+    path("", views.ItemByCategoryView.as_view()),
     path("add-item/", views.AddItemView.as_view()),
     path("states/", views.StatesView.as_view()),
     path("add-state/", views.AddStateView.as_view()),
